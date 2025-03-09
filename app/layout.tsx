@@ -1,7 +1,21 @@
 import type { Metadata } from "next";
-
+import { Montserrat, Open_Sans, Raleway } from "next/font/google"; // Import Raleway
 import "./globals.css";
 
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway", // Define the variable
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "CSE Academic Solutions",
@@ -14,9 +28,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        
+        className={`${montserrat.variable} ${openSans.variable} ${raleway.variable} antialiased`} // Add Raleway variable
       >
         {children}
       </body>

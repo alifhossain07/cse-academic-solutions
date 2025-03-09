@@ -1,2 +1,14 @@
 @import "tailwindcss";
 
+
+  
+ 
+  /* Montserrat for titles */
+  .font-title {
+    font-family: var(--font-raleway), sans-serif;
+  }
+  
+  /* Open Sans for general text */
+  .font-text {
+    font-family: var(--font-open-sans), sans-serif;
+  }
