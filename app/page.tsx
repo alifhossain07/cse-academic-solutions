@@ -1,11 +1,12 @@
 import MarqueeComponent from "./components/component/MarqueeComponent";
+import Hero from "./components/Pages/Home/Hero";
 
 
 export default function Home() {
   return (
     <div className=" ">
       <MarqueeComponent />
-      <h1 className="text-5xl font-title font-bold text-center ">CSE Academic Solutions এ আপনাকে স্বাগতম</h1>
+      <Hero></Hero>
     </div>
   );
 }
