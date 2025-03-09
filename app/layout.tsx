@@ -3,6 +3,7 @@ import { Montserrat, Open_Sans, Raleway } from "next/font/google"; // Import Ral
 import "./globals.css";
 import Header from "./components/shared/Header";
 import { LanguageProvider } from "./context/LanguageContext";
+import ClickSpark from "./components/react-bits-animations/ClickSpark/ClickSpark";
 
 
 const montserrat = Montserrat({
@@ -35,10 +36,19 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${openSans.variable} ${raleway.variable} antialiased`} // Add Raleway variable
       >
+        <ClickSpark sparkColor='#0f0d0d'
+  sparkSize={20}
+  sparkRadius={30}
+  sparkCount={8}
+  duration={400}>
         <LanguageProvider>
-        <Header />
-        {children}
+          
+          <Header />
+          {children}
+          
+        
         </LanguageProvider>
+        </ClickSpark>
        
       </body>
     </html>
