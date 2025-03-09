@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat, Open_Sans, Raleway } from "next/font/google"; // Import Raleway
 import "./globals.css";
+import Header from "./components/shared/Header";
+import { LanguageProvider } from "./context/LanguageContext";
+
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -32,7 +35,11 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${openSans.variable} ${raleway.variable} antialiased`} // Add Raleway variable
       >
+        <LanguageProvider>
+        <Header />
         {children}
+        </LanguageProvider>
+       
       </body>
     </html>
   );
