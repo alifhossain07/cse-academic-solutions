@@ -9,12 +9,12 @@ const Services = () => {
   const { language } = useLanguage();
 
   return (
-    <div className='pt-44 pb-32 w-10/12 mx-auto'>
-      <h1 className='text-4xl font-bold text-center mb-20'>
+    <div  className='pt-44  pb-32 w-10/12 mx-auto'>
+      <h1 data-aos="fade-up" className='text-4xl font-bold text-center mb-20'>
         {language === "en" ? "Our Services" : "আমাদের সেবাসমুহ"}
       </h1>
 
-      <div className='flex justify-between gap-8'>
+      <div data-aos="fade-up" className='flex  justify-between gap-8'>
         {/* Thesis Card */}
         <SpotlightCard className="custom-spotlight-card transition-transform duration-300 hover:scale-105" spotlightColor="rgba(26, 134, 235, 0.445)">
           <AiOutlineFileText size={40} className="text-blue-500" />

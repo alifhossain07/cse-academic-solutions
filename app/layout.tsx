@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/shared/Header";
 import { LanguageProvider } from "./context/LanguageContext";
 import ClickSpark from "./components/react-bits-animations/ClickSpark/ClickSpark";
+import AOSWrapper from "./context/AOSWrapper";
 
 
 const montserrat = Montserrat({
@@ -44,7 +45,10 @@ export default function RootLayout({
         <LanguageProvider>
           
           <Header />
+          <AOSWrapper>
           {children}
+          </AOSWrapper>
+          
           
         
         </LanguageProvider>
